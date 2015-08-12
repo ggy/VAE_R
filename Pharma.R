@@ -1,4 +1,4 @@
-Pharma <- read.csv("~/Documents/Pharma.csv", sep=";")
+Pharma <- read.csv("./Data/Pharma.csv", sep=";")
 names(Pharma)
 
 Pharma[is.na(Pharma)]<-0
@@ -81,3 +81,5 @@ outlier(V, opposite = FALSE, logical = FALSE)
 formule = A ~ B * C * D
 
 reg <- lm(formule, data.frame(V))
+
+boxplot(reg$residuals, outline = FALSE )
